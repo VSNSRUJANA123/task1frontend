@@ -66,4 +66,7 @@ a.active {
   .img-container {
     overflow-x: scroll;
   }
+  .form-style {
+    width: 90%;
+  }
 }
