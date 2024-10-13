@@ -22,18 +22,21 @@ const AdminDashboard = () => {
           <h3 style={{ paddingBottom: "10px" }}>Name: {user.name}</h3>
           <p style={{ paddingBottom: "10px" }}>Handler:{user.handle}</p>
           <div className="img-container">
-            {user.images.map((image, idx) => (
-              <img
-                key={idx}
-                src={`http://localhost:5000/${image}`}
-                alt="User Upload"
-                style={{
-                  width: "250px",
-                  marginRight: "10px",
-                  border: "1px solid",
-                }}
-              />
-            ))}
+            {user.images.map((image, idx) => {
+              console.log(image);
+              return (
+                <img
+                  key={idx}
+                  src={`${url}/${image}`}
+                  alt="User Upload"
+                  style={{
+                    width: "250px",
+                    marginRight: "10px",
+                    border: "1px solid",
+                  }}
+                />
+              );
+            })}
           </div>
         </div>
       ))}
